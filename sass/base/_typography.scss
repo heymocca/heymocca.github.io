@@ -1,0 +1,98 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-gray-dark;
+}
+/* ===============================================
+                Header-heading
+================================================== */
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    backface-visibility: hidden;
+
+    &--main {
+        display: block;
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 3rem;
+        border-right: 2px solid;
+
+        /* Typing Animation*/
+        width: 50rem;
+        /* fallback */
+        width: 48rem;
+        /* # of chars */
+        white-space: nowrap;
+        overflow: hidden;
+        animation:typing 3s steps(35,end),
+        /* # of steps = # of chars */
+        blink-caret .5s step-end infinite alternate;
+
+    }
+
+    &--sub {
+        display: block;
+        font-size: 1.9rem;
+        letter-spacing: 1rem;
+        font-family: 'Rock Salt', cursive;
+        animation: moveToDown 1s ease-in-out 2.8s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-brown-light, $color-brown-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    text-align: justify;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+.content-list {
+    list-style: none;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.rotate__link {
+        &:link,
+        &:visited {
+            color: $color-gray-dark;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-style: italic;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+}
