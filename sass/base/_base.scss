@@ -8,6 +8,22 @@
 
 html {
     font-size: 62.5%;
+
+    @include responsive(tab-land) {  // width < 900
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%;
+    }
+
+    @include responsive(tab-port) {  // width < 600
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%;
+    }
+
+    @include responsive(phone) {  // width < 600
+        font-size: 43.75%; // 1rem = 7px, 8/16 = 43.75%;
+    }
+
+    @include responsive(l-desktop) {
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%;
+    }
 }
 
 body {

@@ -34,15 +34,25 @@ body {
         /* # of steps = # of chars */
         blink-caret .5s step-end infinite alternate;
 
+        @include responsive(phone) {
+            letter-spacing: 1rem;
+            margin-top: 9rem;
+        }
+
     }
 
     &--sub {
         display: block;
-        font-size: 1.9rem;
+        font-size: 1.6rem;
         letter-spacing: 1rem;
         font-family: 'Rock Salt', cursive;
         animation: moveToDown 1s ease-in-out 2.8s;
         animation-fill-mode: backwards;
+
+        @include responsive(phone) {
+            letter-spacing: .5rem;
+            text-align: center;
+        }
     }
 }
 
@@ -61,6 +71,11 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.paragraph-box {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .paragraph {

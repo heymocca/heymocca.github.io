@@ -14,7 +14,12 @@
     background-position: top;
     background-attachment: fixed;
     position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+
+    @include responsive(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+    }
 
     &__logo-box {
         position: absolute;
